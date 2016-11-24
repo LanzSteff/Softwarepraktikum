@@ -1,0 +1,19 @@
+Besprechung am 20.12.2011
+
+TODO:
+- Delete add/remove component methods in Port
+- Datatype from owner must be component
+- General Storage in the Input and Hybrite Port
+- Output port should contain an array where all input ports are contained
+- Implement Code of send and receive methods
+- The storage depents on the type of data
+- Multiple ports can be in one component for different data types
+- Comunication behaivor (push model) between components
+- Compontent checks if the input port has got any data, if yes he takes it out if no the does nothing (pull model)
+- GUI should allow
+ - add/remove components
+ - add/remove ports to components
+ - connect/disconnet in-, output ports
+- GENERATE CODE!
+
+Next meeting 10.01.2012, THU, 1000.

@@ -1,0 +1,43 @@
+Meeting at 17.01.2012
+
+Output Port
+- InputPortList:
+	Should contain only the inputports the output port is conected to, not the components. Which input ports
+	should be specified by the user via the gui. 
+
+Input Port
+- The storage should be limited by the constructor call (via user?)
+- So a normal array with a size
+- If the storage is full, the system reacts to it:
+	- By throwing an exception
+		- do nothing
+		- say the owner of the input port that he should take the data out and clear it
+	- return a boolean value
+	- overwrite the storage
+
+GUI
+- Properties should be specifed by the user via the gui and the properties have to apply to the components and ports.
+- In the GUI should be connections, this means that you choose a concrete component (or a compositon of components, 
+which is treated as one component) and then a port of its ports. So two ports (I/O or Hybrite) are conected and 
+in the InputPortList of the Output port the coneccted input port number is added.
+- A right click at a component or port should open a property dialog where the properties can be specified, of course
+these must apply to the ports.
+
+Model:
+- If a link betwenn 2 ports is fixed (specified/coneccted) we only have to choose what to send, type checking will be
+done by the ports.
+- Model and GUI should work together, everything which is specified in the GUI must be delivered to the model
+- Use the composite pattern:
+	- Their must be a (composite) components which has an array of subclasses called conrete component
+	- The add and deleteComponents Methods should be in the composite component
+	- The subclasses have the checkInputPort and getChild methods
+	- Compositon and Concrete Components should be treated the same
+	- Their must be an atomic component, which has no childs and no getChild method (like a leave in a tree)
+	- Again, Connecting a port to a port, not a port to the component
+
+
+Presentation:
+ - about an 1 h
+ - all team members schould be explaining
+ - 31.01.2012 at 1000 DI
+			
